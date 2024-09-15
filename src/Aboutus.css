@@ -1,0 +1,354 @@
+/* Global Styles */
+* {
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.about-us-container {
+  padding: 20px;
+  background-color: #f8f9fa;
+  color: #444;
+  line-height: 1.75;
+}
+
+/* Hero Section */
+.heroo-section {
+  color: white;
+  background-size: cover;
+  background-position: center;
+  padding: 80px 20px;
+  text-align: center;
+  animation: slideDown 1.5s ease;
+}
+
+.hero-title {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  animation: fadeInUp 1s ease-out;
+  font-family: 'Poppins', sans-serif;
+  color: #f5f5f5;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-description {
+  font-size: 1.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+  animation: fadeInUp 1.5s ease-out;
+  color: #f5f5f5;
+}
+
+/* Section Titles */
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #2c3e50;
+  animation: fadeIn 1s ease;
+}
+
+/* Section Text */
+.section-text {
+  font-size: 1.25rem;
+  color: #4a4a4a;
+  margin-bottom: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 1.8;
+  animation: fadeIn 1.2s ease;
+}
+.test{
+  background-image: url('./assets/StockCake-Confident\ Healthcare\ Professional_1726369842.jpg');
+}
+/* History Section */
+.history-section {
+  padding: 60px 20px;
+  background-color: #fdfdfd;
+}
+
+/* Mission Section */
+.mission-section {
+  padding: 60px 20px;
+  background-color: #eef2f3;
+  animation: fadeIn 1.5s ease;
+}
+
+.mission-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.mission-image img {
+  width: 600px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.mission-image img:hover {
+  transform: scale(1.05);
+}
+
+.mission-text {
+  max-width: 600px;
+  margin: 20px;
+  font-size: 1.25rem;
+  color: #333;
+}
+
+/* Values Section */
+.values-section {
+  padding: 60px 20px;
+  background-color: #f4f7f9;
+}
+
+.values-list {
+  list-style-type: none;
+  padding: 0;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.values-list li {
+  padding: 15px;
+  font-size: 1.25rem;
+  color: #2c3e50;
+  border-left: 4px solid #0073e6;
+  margin-bottom: 15px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1.3s ease;
+}
+
+/* Vision Section */
+.vision-section {
+  padding: 60px 20px;
+  background-color: #eef2f3;
+  animation: fadeIn 1.5s ease;
+}
+
+/* Team Section */
+.team-section {
+  padding: 60px 20px;
+}
+
+.team-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.team-member {
+  text-align: center;
+  max-width: 250px;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.team-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.team-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.team-role {
+  font-size: 1.1rem;
+  color: #0073e6;
+}
+
+.team-description {
+  font-size: 1rem;
+  color: #4a4a4a;
+  margin-top: 10px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Styles */
+
+/* Small Devices (Mobile, 600px and below) */
+@media screen and (max-width: 600px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-description {
+    font-size: 1.25rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .section-text {
+    font-size: 1rem;
+  }
+
+  .mission-image img {
+    width: 100%;
+    height: auto;
+  }
+
+  .mission-text {
+    font-size: 1rem;
+  }
+
+  .team-photo {
+    width: 100px;
+    height: 100px;
+  }
+
+  .team-name {
+    font-size: 1.25rem;
+  }
+
+  .team-role {
+    font-size: 1rem;
+  }
+
+  .team-description {
+    font-size: 0.9rem;
+  }
+}
+
+/* Medium Devices (Tablets, 768px and below) */
+@media screen and (max-width: 768px) {
+  .hero-title {
+    font-size: 3.5rem;
+  }
+
+  .hero-description {
+    font-size: 1.3rem;
+  }
+
+  .mission-image img {
+    width: 100%;
+    height: auto;
+  }
+
+  .section-title {
+    font-size: 2.2rem;
+  }
+
+  .section-text {
+    font-size: 1.15rem;
+  }
+
+  .mission-text {
+    font-size: 1.1rem;
+  }
+
+  .team-photo {
+    width: 120px;
+    height: 120px;
+  }
+
+  .team-name {
+    font-size: 1.4rem;
+  }
+
+  .team-role {
+    font-size: 1rem;
+  }
+
+  .team-description {
+    font-size: 0.95rem;
+  }
+}
+
+/* Large Devices (Desktops and Laptops, 1200px and below) */
+@media screen and (max-width: 1200px) {
+  .hero-title {
+    font-size: 3.8rem;
+  }
+
+  .hero-description {
+    font-size: 1.4rem;
+  }
+
+  .section-title {
+    font-size: 2.3rem;
+  }
+
+  .section-text {
+    font-size: 1.2rem;
+  }
+
+  .mission-image img {
+    width: 90%;
+    height: auto;
+  }
+
+  .team-photo {
+    width: 140px;
+    height: 140px;
+  }
+
+  .team-name {
+    font-size: 1.45rem;
+  }
+
+  .team-role {
+    font-size: 1.05rem;
+  }
+
+  .team-description {
+    font-size: 1rem;
+  }
+}

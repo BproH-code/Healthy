@@ -1,0 +1,130 @@
+/* General Blog Content Styles */
+.blog-content {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header Styles */
+.blog-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.blog-header h1 {
+    font-size: 2.8rem; /* Increased font size for better readability */
+    margin-bottom: 15px;
+    color: #333; /* Darker color for better contrast */
+}
+
+.blog-header p {
+    font-size: 1.2rem; /* Slightly larger font size for better readability */
+    color: #777; /* Softer color for description */
+}
+
+/* Blog Posts Container Styles */
+.blog-posts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px; /* Increased gap between items */
+    justify-content: center; /* Center align items */
+}
+
+/* Individual Blog Post Styles */
+.blog-post {
+    flex: 1 1 calc(33.333% - 30px); /* Adjusted for new gap */
+    background: #f9f9f9; /* Light background for contrast */
+    border-radius: 12px; /* More rounded corners */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Enhanced shadow for better depth */
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align items horizontally */
+}
+
+/* Blog Post Image Styles */
+.blog-post img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 3px solid #ddd; /* Adding a subtle border below the image */
+    transition: box-shadow 0.3s; /* Smooth shadow transition */
+}
+
+/* Blog Post Title Styles */
+.blog-post h2 {
+    font-size: 1.6rem; /* Slightly larger font size */
+    margin: 15px 20px;
+    color: #222; /* Darker color for better readability */
+}
+
+/* Blog Post Description Styles */
+.blog-post p {
+    font-size: 1rem;
+    color: #555; /* Slightly lighter text color for better readability */
+    margin: 0 20px 20px;
+}
+
+/* Blog Post Link Styles */
+.blog-post a {
+    display: block;
+    text-align: right;
+    margin: 0 20px 20px;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+/* Hover Effects for Blog Post Links */
+.blog-post a:hover {
+    color: #0056b3; /* Darker blue on hover */
+    text-decoration: underline; /* Underline text on hover */
+}
+
+/* Blog Post Hover Effect */
+.blog-post:hover {
+    transform: translateY(-8px); /* More pronounced hover effect */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* More prominent shadow on hover */
+}
+
+/* Blog Post Image Hover Effect */
+.blog-post:hover img {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow on image hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .blog-post {
+        flex: 1 1 calc(50% - 30px); /* Adjusted for new gap */
+    }
+}
+
+@media (max-width: 768px) {
+    .blog-post {
+        flex: 1 1 calc(100% - 30px); /* Ensures a full-width card on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .blog-header h1 {
+        font-size: 2.2rem; /* Slightly larger for readability */
+    }
+
+    .blog-header p {
+        font-size: 1.1rem; /* Adjust font size */
+    }
+
+    .blog-post h2 {
+        font-size: 1.3rem; /* Adjust font size */
+    }
+
+    .blog-post p {
+        font-size: 1rem; /* Adjust font size */
+    }
+
+    .blog-post a {
+        font-size: 1rem; /* Adjust font size */
+    }
+}

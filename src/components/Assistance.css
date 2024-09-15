@@ -1,0 +1,250 @@
+
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: url('../assets/pexels-olly-3768916.jpg') no-repeat center center/cover;
+  height: 100vh;
+  color: #ffffff96; /* White text for contrast */
+  padding: 20px;
+  position: relative; /* Required for pseudo-elements */
+  overflow: hidden; /* Hide overflowing content */
+  z-index: 10;
+  scroll-behavior: smooth;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;/* Semi-transparent overlay for better text contrast */
+  z-index: 1; /* Ensure it’s below the text and other content */
+}
+
+.hero-content {
+  max-width: 800px; /* Adjusted for larger screens */
+  margin-bottom: 40px;
+  animation: fadeIn 1.5s ease-out;
+  position: relative; /* Ensures the content is above the pseudo-element */
+  z-index: 2; /* Ensure it’s above the overlay */
+}
+
+.hero-content h1 {
+  font-size: 4em; /* Larger font size for prominence */
+  margin: 0;
+  color: #ffffff; /* White text for the main heading */
+  animation: slideInFromTop 1s ease-out;
+}
+
+.hero-content p {
+  font-size: 1.5em; /* Slightly larger font size for readability */
+  margin: 20px 0;
+  color: #ffffff; /* White text for paragraphs */
+  animation: fadeIn 1.5s ease-out;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-direction: row; /* Row direction for larger screens */
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap; /* Allow buttons to wrap on small screens */
+}
+
+.btn {
+  padding: 15px 25px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  animation: fadeIn 2s ease-out;
+  flex: 1; /* Ensure buttons take equal space */
+  max-width: 300px; /* Set a maximum width */
+  box-sizing: border-box; /* Ensure padding and borders are included in the width */
+}
+
+.primary-btn {
+  background-color: blueviolet; /* Blue for primary button */
+  color: #ffffff; /* White text for primary button */
+}
+
+.primary-btn:hover {
+  background-color: blueviolet; /* Darker blue on hover */
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Adds depth on hover */
+}
+
+.secondary-btn {
+  background-color: #ffffff; /* White background for secondary button */
+  color: rgb(56, 56, 220); /* Blue text for secondary button */
+  border: 2px solid rgb(73, 73, 217); /* Blue border for secondary button */
+}
+
+.secondary-btn:hover {
+  background-color: blueviolets; /* Blue background on hover */
+  color: blueviolet; /* White text on hover */
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Adds depth on hover */
+}
+
+.hero-icons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+  flex-wrap: wrap; /* Allow icons to wrap on small screens */
+}
+
+.icon-container {
+  text-align: center;
+  transition: transform 0.3s, color 0.3s, box-shadow 0.3s;
+  animation: fadeIn 2s ease-out;
+  font-size: 1.7em; /* Adjusted for better visibility */
+  z-index: 100;
+}
+
+.icon-container:hover {
+  transform: scale(1.15); /* Slightly enlarge icons on hover */
+  color: #ffffff; /* White text color on hover */
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.7); /* Glowing effect */
+}
+
+.icon-container p {
+  margin-top: 10px;
+  font-size: 1em;
+  color: #ffffff53; /* White text for icon descriptions */
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(10px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromTop {
+  from {
+      transform: translateY(-30px);
+      opacity: 0;
+  }
+  to {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1440px) {
+  /* Large desktops and laptops */
+  .hero-content {
+    max-width: 90%;
+  }
+
+  .hero-content h1 {
+    font-size: 3.5em;
+  }
+
+  .hero-content p {
+    font-size: 1.25em;
+  }
+}
+
+@media (max-width: 1024px) {
+  /* Tablets and small desktops */
+  .hero-content {
+    max-width: 90%;
+  }
+
+  .hero-content h1 {
+    font-size: 2.5em;
+  }
+
+  .hero-content p {
+    font-size: 1.1em;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 10px; /* Reduced gap between stacked buttons */
+  }
+
+  .btn {
+    width: 100%;
+    margin: 5px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Mobile screens */
+  .hero-content {
+    max-width: 90%;
+  }
+
+  .hero-content h1 {
+    font-size: 2em;
+  }
+
+  .hero-content p {
+    font-size: 1em;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 10px; /* Reduced gap between stacked buttons */
+    justify-content: center;
+    margin-left: 8rem;
+  }
+
+  .btn {
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  .hero-icons {
+    flex-direction: column;
+    font-size: 12px;
+    margin-left: 1rem;
+  }
+
+  .icon-container {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Extra small screens */
+  .hero-content h1 {
+    font-size: 1.5em;
+  }
+
+  .hero-content p {
+    font-size: 0.875em;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 10px; /* Reduced gap between stacked buttons */
+    align-items: center; /* Center buttons horizontally */
+    justify-content: center; /* Center buttons vertically */
+    align-items: center;
+  }
+
+  .btn {
+    width: 100%; /* Ensure buttons are full width */
+    padding: 20px; /* Increased padding for better touch targets */
+    font-size: 1.2em; /* Larger font size for better readability */
+    margin: 5px 0;
+    margin-right: 10rem;
+  }
+}
