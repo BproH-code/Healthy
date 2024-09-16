@@ -14,3 +14,4 @@ Currently, two official plugins are available:
 # Healthy
 # Health-assistant
 # Health-assistant
+# Health-assistant
