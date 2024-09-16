@@ -23,3 +23,4 @@ Currently, two official plugins are available:
 # Healthy
 # Healthy
 # beni
+# beni
